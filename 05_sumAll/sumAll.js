@@ -1,5 +1,9 @@
+const isNegative = (a,b) => a < 0 || b < 0;
+const isNotNumber = (a,b) => typeof a != "number" || typeof b != "number";
+const isNotInteger = (a,b) => !Number.isInteger(a) || !Number.isInteger(b);
+
 const sumAll = function(minInput,maxInput) {
-    if(minInput < 0 || typeof minInput != "number" || typeof maxInput != "number" || !Number.isInteger(minInput) || !Number.isInteger(maxInput)) {
+    if(isNegative(minInput,maxInput) || isNotNumber(minInput,maxInput) || isNotInteger(minInput,maxInput)) {
         return "ERROR";
     }
 
