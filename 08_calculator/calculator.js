@@ -26,8 +26,16 @@ const power = function(number1, number2) {
 	return number1 ** number2;
 };
 
-const factorial = function() {
-	
+const factorial = function(inputNumber) {
+	if(inputNumber == 0 || inputNumber == 1){
+    return 1;
+  }
+
+  let currentProduct = 1;
+  for (let i = inputNumber; i > 0; i--) {
+    currentProduct *= i;
+  }
+  return currentProduct;
 };
 
 // Do not edit below this line
