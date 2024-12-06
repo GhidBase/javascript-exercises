@@ -6,7 +6,7 @@ const findTheOldest = function(arr) {
 
 function findAge(person) {
     let yearOfDeath;
-    if(!person.hasOwnProperty('yearOfDeath')) {
+    if(!person.yearOfDeath) {
         yearOfDeath = new Date().getFullYear();
     }
     else {
